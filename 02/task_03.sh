@@ -1,11 +1,14 @@
 #!/bin/bash
 
 read -p "Введите число: " int_input
-echo $int_input
 
-for (i=0; i<=$int_input; i++)
+factorial=1
+
+for ((i=1; i<=$int_input; i++));
 do
-    echo $i
+    let "factorial *= i"
 done
+
+echo $factorial
 
 exit 0
